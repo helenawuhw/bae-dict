@@ -1,0 +1,28 @@
+<head>
+  <title>bae-dict</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Gran Bae Dictionary</h1>
+    </header>
+ 
+	<form class="new-task">
+        <input type="text" name="text" placeholder="Press enter to submit" />
+    </form>
+
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="task">
+  <li>
+  	<button class="delete">&times;</button>
+  	{{text}}
+  </li>
+</template>
